@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Lustria|Lato');
+
+
+/* Cross Browser Compatability CSS */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+
+/*------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+
+/* Import Google fonts */
+
+
+/*------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+
+#page-container {
+	width: 80%;
+	margin: auto;
+	font-family: 'Lustria', serif;
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 100%;
+	font-family: 'Lato', sans-serif;
+}
+
+h4 {
+	font-size: 80%;
+	font-family: 'Lato', sans-serif;
+}
+
+p {
+	font-size: 100%;
+	font-family: 'Lato', sans-serif;
+}
+
+header {
+	text-align: center;
+	padding: 1em;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+div {
+	text-align: center;
+}
+
+#reservations, #reviews {
+	padding: 1em;
+	text-align: center;
+}
+
+#reservations div, #reviews div {
+	display: inline-flex;
+	flex-direction: column;
+	border: solid black 2px;
+	padding: .5em;
+	margin: .5em;
+	justify-content: center;
+	width: 40%;
+	line-height: 1.5;
+}
+
+table {
+	margin: auto;
+	width: 100%;
+	border: solid gray 1px;
+	font-family: 'Lato', sans-serif;
+}
+
+td {
+	width: 50%;
+	margin:;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+}

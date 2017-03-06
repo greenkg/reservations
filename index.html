@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"> 
+	<link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+	<title>Unit 9 Project</title>
+</head>
+
+<body>
+
+	<div id='page-container'>
+
+		<header>
+			<h1>Monk's Cafe</h1>
+			<h3>"The Coffee Shop"</h3>
+		</header>
+
+		<img src="assets/toms-restaurant.jpg" alt="Image of Tom's Restaurant"></img>
+
+		<div id="reservations">
+			<h2>Reservations</h1>
+			<div id='make-reservation'>				
+				<form>
+					<h3>Make a reservation</h3>
+					<br>
+					<h4>Name</h4><input id="userName" type="text" placeholder="Enter Name">
+					<h4>Date</h4><input id="resDate" type="date">
+					<h4><button>Confirm</button></h4>
+				</form>
+			</div>
+			<div id='existing-reservations'>
+				<h3>Existing reservations</h3>
+				<table>
+					<thead>
+						<th>Name</th>
+						<th>Day</th>
+					</thead>
+					<tbody id='reservationsList'>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div>
+			<h2>Come Dine With Us</h2>
+			<br>
+			<div id="map">
+			</div>
+		</div>
+
+		<br>
+
+		<div id="reviews">
+			<h2>Customer Reviews</h2>
+			<div>
+				<img src="assets/jerry.jpg" alt="Photo of Jerry"></img>
+			</div>
+			<div>
+				<p>Here is Jerry's review</p>
+			</div>
+		</div>
+
+	</div>
+
+<script id="reservation-template" type="text/x-handlebars-template">
+	<tr data-id="{{reservationId}}">
+		<td>{{name}}</td>
+		<td>{{date}}</td>
+	</tr>
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+<script src="js/handlebars-v4.0.5.js"></script>
+<script src="js/jquery-3.1.1.js"></script>
+<script src ="js/jquery-validation-1.16.0/dist/jquery.validate.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDalFLB-OppwlIfavQl4BP1ofutoheImEo"></script>
+<script src ="js/main.js"></script>
+
+
+
+
+</body>
+
+
+
+
+</html>
