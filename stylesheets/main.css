@@ -120,6 +120,10 @@ div {
 	line-height: 1.5;
 }
 
+.error {
+	border: solid red 3px;
+}
+
 table {
 	margin: auto;
 	width: 100%;
@@ -129,7 +133,8 @@ table {
 
 td {
 	width: 50%;
-	margin:;
+	margin: auto;
+	padding-right: 5px;
 }
 
 #map {
