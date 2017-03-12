@@ -110,6 +110,10 @@ p {
 	font-family: 'Lato', sans-serif;
 }
 
+i {
+	cursor: pointer;
+}
+
 header {
 	text-align: center;
 	padding: 1em;
