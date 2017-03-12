@@ -18,8 +18,14 @@ function initMap() {
 function getPlaceId(mapCenter) {
 	var placesKey = "AIzaSyDalFLB-OppwlIfavQl4BP1ofutoheImEo";
 	var placesURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + mapCenter.lat + "," + mapCenter.lng + "&radius=100&type=restaurant&key=" + placesKey;
-	$.get(placesURL, function(searchResult) {
-		console.log(searchResult.placeId);
+	$.ajax({
+		url: placesURL,
+		type: "GET",
+		dataType: 'jsonp',
+		cache: false,
+		success: function(response){                          
+            alert(response);                   
+        }
 	});
 }
 
