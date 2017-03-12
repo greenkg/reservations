@@ -9,26 +9,26 @@ function initMap() {
 	var marker = new google.maps.Marker({
 		position: mapCenter,
 		map: map
-	});
-	var placeId = getPlaceId(mapCenter);
+	});	
+	var service = new google.maps.places.PlacesService(document.createElement('div'));	
+	service.getDetails({
+		placeId: 'ChIJLyERijv2wokR8G_K-v8FXX4'
+		}, function(result){
+			$('#hours').empty;
+			if (result.opening_hours.open_now) {
+				$('#hours').append("<h2>Open now!</h2>");
+			} else {
+				$('#hours').append("<p>Currently closed</p>");
+			}
+			for (i in result.opening_hours.weekday_text) {
+				var dailyHours = '<p>' + result.opening_hours.weekday_text[i] + '</p>';
+				$('#hours').append(dailyHours);
+			}
+			
+
+		}
+	);
 }
-
-//use Google Places API to get restaurant's hours
-
-function getPlaceId(mapCenter) {
-	var placesKey = "AIzaSyDalFLB-OppwlIfavQl4BP1ofutoheImEo";
-	var placesURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + mapCenter.lat + "," + mapCenter.lng + "&radius=100&type=restaurant&key=" + placesKey;
-	$.ajax({
-		url: placesURL,
-		type: "GET",
-		dataType: 'jsonp',
-		cache: false,
-		success: function(response){                          
-            alert(response);                   
-        }
-	});
-}
-
 //configure and initialize Firebase
  var config = {
     apiKey: "AIzaSyDy1g81QkpfZXgftjirh7HCom6ndRg_MD8",

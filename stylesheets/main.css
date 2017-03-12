@@ -59,25 +59,45 @@ input, select { vertical-align: middle; }
 /*------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 
+body {
+	background-color: Lavender;
+}
+
+button {
+	margin-top: 10px;
+	background-color: lightGreen;
+	font-family: 'Lato', sans-serif;
+	padding: 5px;
+}
+
+em {
+	font-weight: bold;
+}
+
 #page-container {
-	width: 80%;
+	background-color: floralWhite;
+	width: 50em;
 	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	font-family: 'Lustria', serif;
 }
 
 h1 {
 	font-size: 200%;
+	color: steelBlue;
 	font-weight: bold;
 }
 
 h2 {
 	font-size: 150%;
+	color: steelBlue;
 	font-weight: bold;
 }
 
 h3 {
-	font-size: 100%;
-	font-family: 'Lato', sans-serif;
+	font-size: 120%;
+	font-family: 'Lustria', sans-serif;
 }
 
 h4 {
@@ -96,12 +116,14 @@ header {
 }
 
 img {
-	max-width: 100%;
+	max-width: 80%;
 	height: auto;
+	margin: auto;
 }
 
 div {
 	text-align: center;
+	vertical-align: top;
 }
 
 #reservations, #reviews {
@@ -112,12 +134,15 @@ div {
 #reservations div, #reviews div {
 	display: inline-flex;
 	flex-direction: column;
-	border: solid black 2px;
 	padding: .5em;
 	margin: .5em;
 	justify-content: center;
 	width: 40%;
 	line-height: 1.5;
+}
+
+#reservations div {
+	width: 50%;
 }
 
 .error {
@@ -127,7 +152,6 @@ div {
 table {
 	margin: auto;
 	width: 100%;
-	border: solid gray 1px;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -138,6 +162,13 @@ td {
 }
 
 #map {
+	margin: auto;
 	height: 400px;
-	width: 100%;
+	width: 80%;
+}
+
+#hours {
+	width: 50%;
+	margin: auto;
+	padding-bottom: 2em;
 }
