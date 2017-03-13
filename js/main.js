@@ -68,7 +68,12 @@ $('#reservations').on('click', '.fa-trash-o', function(e) {
 	e.preventDefault();
 	var id = $(e.target).closest('tr').attr('id');
 	var reservationId = database.ref('reservations/' + id);
-	reservationId.remove();
+	var name = $(e.target).closest('td').siblings([0]).html();
+	var confirmMessage = "Are you sure you want to cancel the reservation for " + name + "?";
+	var r = confirm(confirmMessage);
+	if (r == true) {
+		reservationId.remove();
+	}
 
 });
 
